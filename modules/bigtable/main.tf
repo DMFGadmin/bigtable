@@ -1,3 +1,9 @@
+resource "google_project_service" "enable_bigtable_api" {
+  project = var.project_id
+  service = "bigtableadmin.googleapis.com"
+}
+
+
 resource "google_bigtable_instance" "development-instance" {
   name          = "tf-instance"
   instance_type = "DEVELOPMENT"
