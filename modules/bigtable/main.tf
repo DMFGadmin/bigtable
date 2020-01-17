@@ -15,6 +15,7 @@ resource "google_bigtable_instance" "development-instance" {
     zone         = var.zone
     storage_type = "HDD"
   }
+  depends_on = [google_project_service.enable_bigtable_api]
 }
 
 resource "google_bigtable_table" "table" {
