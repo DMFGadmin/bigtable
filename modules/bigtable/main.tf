@@ -1,7 +1,8 @@
 resource "google_bigtable_instance" "development-instance" {
   name          = "tf-instance"
   instance_type = "DEVELOPMENT"
-  display_name = var.project_id
+  display_name = var.display_name
+  project = var.project_id
 
   cluster {
     cluster_id   = var.cluster_name
