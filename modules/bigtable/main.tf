@@ -20,6 +20,7 @@ resource "google_bigtable_instance" "development-instance" {
 
 resource "google_bigtable_table" "table" {
   name          = "tf-table"
+  project = var.project_id
   instance_name = google_bigtable_instance.development-instance.name
   split_keys    = ["a", "b", "c"]
 }
