@@ -5,3 +5,7 @@ variable "cluster_name" {
 variable "zone" {
   type = string
 }
+
+variable "display_name" {
+
+}
