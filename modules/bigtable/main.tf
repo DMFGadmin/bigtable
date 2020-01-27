@@ -8,10 +8,10 @@ data "terraform_remote_state" "project-and-networks" {
   }
 }
 
-resource "google_project_service" "enable_bigtable_api" {
-  project = data.terraform_remote_state.project-and-networks.outputs.afrl-big-data-project-id
-  service = "bigtableadmin.googleapis.com"
-}
+//resource "google_project_service" "enable_bigtable_api" {
+//  project = data.terraform_remote_state.project-and-networks.outputs.afrl-big-data-project-id
+//  service = "bigtableadmin.googleapis.com"
+//}
 
 
 resource "google_bigtable_instance" "development-instance" {
