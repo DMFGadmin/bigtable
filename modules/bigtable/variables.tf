@@ -9,3 +9,7 @@ variable "zone" {
 variable "display_name" {
 
 }
+
+variable "project_id" {
+
+}
